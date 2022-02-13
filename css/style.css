@@ -52,14 +52,16 @@ header{
     text-shadow: .2rem .3rem .2px rgba(0,0,0,0.4);
     line-height: 3.5rem;
     margin-bottom: 2rem;
-    animation: moveBanner 1s;
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
 }
 @keyframes moveBanner {
     0%{
-        transform: rotateY(10em);
+        transform: translateY(10rem) rotateY(-30deg);
     }
     100%{
-        transform: rotateY(0em);
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
     }
 }
 .banner p{
@@ -67,6 +69,8 @@ header{
     color: white;
     font-size: 2rem;
     margin-bottom: 2rem;
+    animation: moveBanner 1s 0.7s forwards;
+    opacity: 0;
 }
 .banner button{
     font-family: 'Mulish', serif;
@@ -81,6 +85,8 @@ header{
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s forwards 0.9s;
 }
 
 .banner button:hover{
